@@ -1,0 +1,26 @@
+$primaryColor: rgb(0, 0, 37);
+$primaryLightColor: rgb(11, 25, 81);
+$buttonPrimary: #527ceb;
+$buttonPrimaryLight: #03a7d3;
+$secondaryColor: #b6246e;
+$secondaryLightColor: #f9636b;
+@mixin betterButton($color){
+    color: white;
+    border: transparent;
+    border-radius: 50rem;
+    padding: .5rem 2rem;
+    background-image: linear-gradient(transparent, transparent);
+    transition: background-image 2s;
+    &:hover{
+        box-shadow: 0 0 1rem 0 $color;
+    }
+}
+@mixin bgGradientTopToBottom ($color1 , $color2){
+    background-image: linear-gradient($color1, $color2);
+}
+@mixin bgGradientLeftToRight ($color1 , $color2){
+    background-image: linear-gradient(to right, $color1, $color2);
+}
+@mixin bgGradientToBottomRight ($color1 , $color2) {
+    background-image: linear-gradient(to bottom right, $color1, $color2);
+}
