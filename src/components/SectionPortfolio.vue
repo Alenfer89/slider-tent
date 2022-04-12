@@ -87,6 +87,11 @@ export default {
 @import '../assets/styles/style.scss';
 
 section#portfolio{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
     p:first-child{
         color: $secondaryLightColor;
     }
@@ -106,6 +111,12 @@ section#portfolio{
     div.ax-slider-container{
         height: 500px;
         background-color: aquamarine;
+        //overflow: hidden;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
     div.slider-counter{
         height: 10px;
